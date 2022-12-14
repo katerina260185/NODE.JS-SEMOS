@@ -1,0 +1,1 @@
+console.log("zdravo, ova e prv cas");
