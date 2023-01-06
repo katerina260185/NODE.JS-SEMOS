@@ -1,0 +1,11 @@
+{
+  "name": "statistika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "domasna.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -6,7 +6,7 @@ console.log("ova e string");
 console.log(1112344);
 console.log(false);
 console.log("[1, 2]");
-console.log({a: "a1", b:"b1"});
+console.log({a: "a1", b: "b1"});
 console.log("zdravo"); console.log("vtor cas"); // moze i vaka, no preporaclivo e da odat vo poseben red
 
 let poraka = "zdravo";
@@ -34,14 +34,15 @@ for(let k = 0; k < 10; k++)
    // console.log("K: " + k);
 /*
     */
+if(k == 6)
+{
+  break;
+}
     if(k % 2 == 0)
     {
      console.log(k);
     }
-    if(k == 10)
-    {
-      break;
-    }
+    
 }
 
 
@@ -61,3 +62,4 @@ let mess2 = (p = "arrow function") => {
     console.log(p)
 }
 mess2()
+
