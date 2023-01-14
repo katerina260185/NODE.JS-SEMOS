@@ -67,8 +67,8 @@ const server = http.createServer((req,res) => {
 
 
 
-res.write("7"); // vo response
-console.log("********************")
+//res.write("7"); // vo response
+//console.log("********************")
 res.end();
 
 });

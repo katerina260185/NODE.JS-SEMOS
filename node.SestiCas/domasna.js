@@ -1,36 +1,60 @@
-
-const exp = require('constants');
+/*
+const fs = require("fs");
 const http = require ('http');
 const url = require("url");
-const express = express();
+const adress = 'http://localhost:8080/sobiranje/3/4';
+const q = url.parse(adress, true);
+const operacii = require ("./operacii.js")
+const{sobiranje,odzemanje, mnozenje, delenje} = require ("./operacii.js")
 
 const server = http.createServer((req,res) => {
-    express.get('/:operacija/:a/:b')
-    
-const a = 9;
-const b = 3
-;
-const operacija = "/";
+    fs.readFile('operacii.js', function(err, data) {
+        res.writeHead(200, {'Content-Type': 'text/js'});
+        res.write("7");
+        console.log(operacii.sobiranje(3,4))
 
-if(operacija == "*"){
-    console.log( a * b);
-}else if (operacija == "/"){
-    console.log(a / b) 
-} else if (operacija == "+"){
-    console.log(a + b)
-} else if(operacija == "-"){
-    console.log(a - b)
-} else if (operacija == "/" && (a === 0 || b === 0)){
-    console.log("error") 
-} else {
-    console.log("nema broj");
-}
-   
-
-        res.write("7"); // vo response
-        console.log("proba")
-        res.end();
-
-    })
+        return res.end();
+    }) 
+})  
 
 server.listen(8080);
+//console.log(q)
+//console.log(q.search)
+//console.log(q.query)
+//console.log(q.host)
+
+*/
+
+const http = require('http');
+const url = require('url');
+const fs = require('fs');
+const operacii = require ("./operacii.js")
+const{sobiranje,odzemanje, mnozenje, delenje} = require ("./operacii.js")
+
+
+const server = http.createServer((req,res) => {
+    server({
+        method: 'GET',
+       path: '/calculator/sobiranje/{num1}+{num2}',
+        handler: function (request, h) {
+
+            const num1 = parseInt(request.params.num1);
+            const num2 = parseInt(request.params.num2);
+
+            let data = {
+                answer: num1 + num2
+            };
+    
+            return data;
+        }
+    });
+
+
+//res.write("7"); // vo response
+//console.log("********************")
+res.end();
+
+});
+
+server.listen(8080);
+

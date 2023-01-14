@@ -192,7 +192,7 @@ let imenki = [
       await fileWrite("imenki.txt", imenkiData);
       let dataString = await fileRead("imenki.txt");
       let data = JSON.parse(dataString);
-      console.log(data)
+     // console.log(data)
     } catch (err){
         console.log(err);
     }
