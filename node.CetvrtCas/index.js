@@ -188,11 +188,11 @@ let imenki = [
 (async() =>{
     try {
       let imenkiData = JSON.stringify(imenki)  
-      console.log(imenkiData);
+      //console.log(imenkiData);
       await fileWrite("imenki.txt", imenkiData);
       let dataString = await fileRead("imenki.txt");
       let data = JSON.parse(dataString);
-     // console.log(data)
+      console.log(data)
     } catch (err){
         console.log(err);
     }

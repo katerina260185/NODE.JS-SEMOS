@@ -28,33 +28,18 @@ server.listen(8080);
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
-const operacii = require ("./operacii.js")
-const{sobiranje,odzemanje, mnozenje, delenje} = require ("./operacii.js")
+//const operacii = require ("./operacii.js")
+//const{sobiranje,odzemanje, mnozenje, delenje} = require ("./operacii.js")
 
 
 const server = http.createServer((req,res) => {
-    server({
-        method: 'GET',
-       path: '/calculator/sobiranje/{num1}+{num2}',
-        handler: function (request, h) {
-
-            const num1 = parseInt(request.params.num1);
-            const num2 = parseInt(request.params.num2);
-
-            let data = {
-                answer: num1 + num2
-            };
-    
-            return data;
-        }
-    });
+const q = req.url
+console.log(q)
 
 
-//res.write("7"); // vo response
-//console.log("********************")
+
 res.end();
 
 });
 
 server.listen(8080);
-
