@@ -1,22 +1,23 @@
 const fs = require("fs");
 
 const express = require("express");
+const { query } = require("express");
 
+// funkcija za prezemanje od body i zapisuvanje vo nova datoteka.podatoci.txt
 
-// funkcija studentiTXT za zapisuvanje vo txt.file
-
- const studentiTXT = (filename, data) => {
-    return new Promise((resolve, reject) => {
-        fs.writeFile(filename, data, (err) => {
-            if (err) {
-                return reject(err);
-            }
-            return resolve(data);
-        });
-    });
+const prezemiJson = (req,res) =>{
+    let result = JSON.stringify(req.query)
+    fs.writeFile("podatoci.txt", result, (err) => {
+        if(err){
+            return err
+        }
+        return result
+    })
+    res.send(result)
+   
 }
 
 // da moze funkcijata da se koristi nadvor od datotekata
 module.exports = {  
-    studentiTXT,
+    prezemiJson, 
 };

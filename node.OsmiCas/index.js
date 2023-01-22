@@ -1,4 +1,4 @@
-// framework zbir od biblioteki koi ne se fokssirani na edna problematika
+// framework zbir od biblioteki koi ne se fokusirani na edna problematika
 //express framework koe nudi mnozestvo na funkcionalnosti, otvoren kod za site
 // da ja podobri funkcionalnosta na JS
 // lokalno koristenje npm install express
@@ -13,7 +13,7 @@ const handlers = require("./hendlers")
 app.use(express.json())
 
 
-//get metodot ispraka sodrzina, prima nekolku argumenti, 2 se najcesto koristeni: 1 rutata "/" i hendler funkcija so (req,res)
+//get metodot prezema sodrzina, prima nekolku argumenti, 2 se najcesto koristeni: 1 rutata "/" i hendler funkcija so (req,res)
 app.get("/", (req,res)=> {
     res.send ("zdravo od get pochetna")
     
@@ -31,8 +31,8 @@ app.get("/calc/:operation", handlers.calculator)
 app.post("/calc/:operation", handlers.calculator2)
 
 
-//pomegu req i res se naoga midlle were
-//middle were   //next e za ako ima poveke middle were
+//pomegu req i res se naoga midllewere
+//middlewere   //next e za ako ima poveke middle were
 
 
 //funkcija za site metodi: get,post, put,delete....
