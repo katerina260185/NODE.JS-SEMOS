@@ -1,0 +1,92 @@
+header{
+max-width: 100%;
+background-color: #034f84;
+padding:10px;
+color:#f7cac9;
+text-align: center;
+font-weight: bold;
+font-size: 50px;
+}
+
+
+.foodDiv{
+max-width: 100%;
+}
+
+.flexDiv {
+display:flex;
+flex-direction: row;
+justify-content: center;
+background-color: #f7cac9;
+
+}
+.divOne, .divTwo, .divThree {
+max-width: 100%;
+margin: 10px;
+padding: 10px;
+font-size: 30px;
+}
+img{
+    max-width: 700px;
+    max-height: 200px;
+    
+}
+h6{
+    text-align: center;
+    color:#034f84;
+}
+
+.like{
+    background-color: red;
+    padding:10px 25px;
+    border:none;
+    border-radius: 2px;
+    color:white;
+    margin-left:40px;
+}
+
+.unlike{
+    background-color: blue;
+    padding:10px 25px;
+    border:none;
+    border-radius: 2px;
+    color:white;
+    margin-left:25px;
+    
+  
+}
+
+.like:hover{
+    background-color: darkred;
+}
+
+.unlike:hover{
+    background-color: darkblue;
+}
+
+.tableDiv{
+    max-width: 100%;
+    background-color: #034f84;
+}
+table {
+    max-width: 50%;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid blue;
+    background-color: #92a8d1;
+    margin: 0 400px;
+   
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #034f84;
+    color:#034f84;
+  }
+
+  th{
+    background-color:#f7786b;
+    color:#034f84;
+  }
+  
