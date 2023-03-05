@@ -15,22 +15,23 @@ import { OwnedCars } from './components/OwnedCars';
 
 
 function App() {
-  
+  // CARS FOR SALE
     const[car, setCar] = useState([
       { id: 1, brand: "Ford" },
       { id: 2, brand: "BMW" },
       { id: 3, brand: "audi"},
 
     ]);
-  const [newCar, setNewcar] = useState(true)
-  /*
+  const[newCar, setNewcar] = useState("")
+
+  //OWNED CARS
+  
   const[ownCar, setOwnCar] = useState([
     {id:1, brand:"FORD"},
     { id: 2, brand: "BMW" },
     { id: 3, brand: "audi"},
 ])
-const[ownNewCar, setOwnNewCar] = useState(true)
-*/
+
     function AddnewCar () {
      let newObject =  {
        brand: newCar,
@@ -40,10 +41,7 @@ const[ownNewCar, setOwnNewCar] = useState(true)
        setNewcar("")
     }
     
-    function Buynewcar () {
    
-      
-     }
       
   return (
     /*
@@ -74,12 +72,14 @@ const[ownNewCar, setOwnNewCar] = useState(true)
       </div>
     
       <CarsForSale listOfCar={car} />
+      
       <div>
       
      
       </div>
       <hr></hr>
       <h1>Owned Cars</h1>
+      <OwnedCars listofOwnedCars={ownCar}/> 
       
       
    </div>
