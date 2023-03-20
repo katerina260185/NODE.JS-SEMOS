@@ -25,10 +25,6 @@ useEffect(()=>{
         <p>phone: {userDetails.phone}</p>
         <p>website: {userDetails.website}</p>
         <p>Company-name: {userDetails.company.name}</p>
-
-
-
-
         </div>
         )
     )
