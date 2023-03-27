@@ -22,7 +22,11 @@ function App() {
       { id: 3, brand: "audi"},
 
     ]);
+    // za dodavanje na nova kola od input vo cars for sale
   const[newCar, setNewcar] = useState("")
+
+  // za da ja kupis kolata od cars for sale i da ja snema
+  
 
   //OWNED CARS
   
@@ -31,7 +35,7 @@ function App() {
     { id: 2, brand: "BMW" },
     { id: 3, brand: "audi"},
 ])
-
+    // nov object za nova kola od input da ja dodade vo CARS FOR SALE
     function AddnewCar () {
      let newObject =  {
        brand: newCar,
@@ -60,6 +64,7 @@ function App() {
 {/*<ListOfCars/> */}
 
 <div>
+  
       <h1>Cars for Sell</h1>
       <input
       type="text"
@@ -79,7 +84,7 @@ function App() {
       </div>
       <hr></hr>
       <h1>Owned Cars</h1>
-      <OwnedCars listofOwnedCars={ownCar}/> 
+      <OwnedCars listofOwnedCars={ownCar}/>  
       
       
    </div>

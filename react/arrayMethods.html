@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Click Me!</button>
+
+    <script>
+        let users = [
+            {firstName: "Susan", lastName: "Steward", age: 25},
+            {firstName: "Katerina", lastName: "Atanasovska", age: 30},
+            {firstName: "Sofija", lastName: "Petrova", age: 15}
+
+        ]
+
+        let mapUsers = users.map((user) => {
+            let fullName = user.firstName + " " + user.lastName;
+            return fullName
+        })
+        //console.log(mapUsers)
+
+        let cars = [
+            {godina: 2020, model: "opel", marka: "corsa"},
+            {godina: 2022, model: "mercedes", marka: "Eclasa"},
+            {godina: 2015, model: "reno", marka: "clio"}
+
+        ]
+        let prvaKola = cars.map((car) => {
+            let podatociZaKola = car.godina + " " + car.marka;
+            return podatociZaKola
+        })
+        //console.log(prvaKola)
+       let result2 = cars.filter((car)=> {
+        let carYear = car.godina > 2020
+        return carYear
+       })
+      // console.log(result2)
+       
+
+        //console.log(prvaKola)
+
+        // map sekogas vraka nova niza a forEach ja menuva orginalnata niza
+        //map ne ja menuva goleminata na orginalnata niza
+        //filter method vraka nova niza vo zavisnost od kriteriumot
+        //find metodot 
+        
+        let result = users.filter((user) => {
+          let person2 =  user.age > 20
+          return person2
+        })
+       // console.log(result)
+
+
+
+        let onePerson = users.find((person)=> {
+           let firstPerson = person.firstName === "Katerina"
+           return firstPerson
+        })
+        //console.log(onePerson)
+
+        let fruits = ["mango", "ananas", "lemons", "orange"]
+        let fruits1 = fruits[0];
+        //destruktuiranje
+        let [fruitOne,, fruitThree ] = fruits;
+       // console.log(fruitOne,fruitThree)
+
+       const human = {
+        ime: "katerina",
+        lastName: "Atanasovska",
+        age: 30,
+        hobies: {
+            hobie1: "reading",
+            hobies2: "football"
+        }
+       }
+
+       const{name, age, hobies:{hobie1}} = human;
+       if(age > 27) {
+        console.log("ADULT")
+       } else {
+        console.log(name);
+       }
+
+       let cars2 = {
+            godina: 2006,
+             model: "opel", 
+             marka: "corsa", 
+             vrati: {
+                vrati1: 2,
+                vrati2: 4,
+             }
+       }
+       const{godina,vrati, vrati:{vrati2}} = cars2;
+       console.log(godina)
+       console.log(vrati )
+       console.log(vrati2)
+
+       if(godina < 2010 ){
+        console.log("you need a new car")
+       } else{
+        console.log("ok")
+       }
+
+       let fruits2 = ["mango", "ananas", "lemons", "orange"];
+       let{firstFruits, ...rest} = fruits2;
+       console.log(rest)
+
+       let pets = ["dog", "cat"]
+       let wildAnimals = ["lion", "wolf", "tiger"]
+       //spred operator
+
+       let animals = [pets, wildAnimals];
+       console.log(animals)
+
+       let animalsSpreed =[...pets, ...wildAnimals, ...fruits]
+       console.log(animalsSpreed)
+
+       // react e biblioteka
+       //localhost:3000
+    </script>
+</body>
+</html>

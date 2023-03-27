@@ -38,6 +38,8 @@ function App() {
     <Route path="/movies/new" element ={<Newmovie/>}/>
     <Route path="/movies/id" element={<MovieByid/>}/>
     <Route path="/movie/:id" element={<IdOne/>}/>
+    
+
     <Route path="*" element={<Movienotfound/>}/>
 
 
@@ -45,10 +47,7 @@ function App() {
    </Routes>
       </MovieContext.Provider>
      
-   
 
-
-  
     </div>
   );
 }

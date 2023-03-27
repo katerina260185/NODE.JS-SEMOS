@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Edit <%= data.title; %>
+    </title>
+</head>
+
+<body>
+    <form method="post" action="/callback/post/<%= data._id; %>">
+        <input type="text" name="title" placeholder="Naslov na postot" value="<%= data.title; %>" required>
+        <br>
+        <br>
+        <textarea name="content" placeholder="Sodrzhina na postot" required> value="<%= data.content; %>"</textarea>
+        <button type="submit">Azhuriraj post</button>
+    </form>
+</body>
+
+</html>

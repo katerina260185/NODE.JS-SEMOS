@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { OwnedCars } from "./OwnedCars";
 
 
 
@@ -9,7 +10,7 @@ export const CarsForSale= ({listOfCar})=> {
     {listOfCar.map((c, i)=> {
       return (
         <li key={i}>
-          <span>{c.brand} <button>BUY</button></span>
+          <span>{c.brand} <button onClick={buyCar} >BUY</button></span>
 
         </li>
       )

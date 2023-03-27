@@ -17,7 +17,7 @@ export const Login = ()=> {
    const[textarea, setTextarea] = useState("")
   
   
-   // ja zema sodrzinata od input
+   // ja zema sodrzinata od input za site od ednas
    const handleChange = (event)=> {
    const{name, value} = event.target
    setValues({...values, [name]: value})
@@ -69,16 +69,19 @@ function showValues () {
 
                     {isTextarea ? (
                     <textarea
-                    onChange={handleChange}
                     type="textarea"
                     cols = "50"
                     rows ="20"
                     placeholder="comment"
                     name="comment"
                     value={values.comment}
+                    onChange={handleChange}
                     />
                     ) : (
-                    <input type="text" placeholder="comment" value={values.comment} onChange={handleChange} /> )}
+                    <input type="text" 
+                    placeholder="comment" 
+                    value={values.comment} 
+                    onChange={handleChange} /> )}
                     <button onClick={changeTextarea}>change</button>
     
                     <br/>

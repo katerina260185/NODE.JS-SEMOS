@@ -2,7 +2,7 @@ import {useState} from "react";
 
 
 export const Homework = () => {
-    const initialValues = {username:"",lastname:"", email:"", password:"", age:""}
+    const initialValues = {username:"", lastname:"", email:"", password:"", age:""}
     const[formValue, setFormValues] = useState(initialValues)
     const[hideValues, setHideValues] = useState(false) // boolean
     

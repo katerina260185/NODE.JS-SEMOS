@@ -1,8 +1,10 @@
 
 const mongoose = require("mongoose");
 
+                            // Patekata do mogno bazata
 const connectionString = "mongodb://127.0.0.1:27017/klienti"; // kreiras baza
 
+            //konektiranje so mongo bazata
 const connect = (connectionString) => {
     return new Promise((success, fail) => {
         mongoose.connect(connectionString, err => {
@@ -12,7 +14,7 @@ const connect = (connectionString) => {
         });
     });
 };
-
+        //kreiranje na modelot (struktura na dokumentot) i ime na kolekcijata
 const klienti = mongoose.model(
     "klienti", // model
     {

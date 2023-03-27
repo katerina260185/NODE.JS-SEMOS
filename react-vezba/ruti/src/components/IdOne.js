@@ -2,11 +2,12 @@ import { useParams } from "react-router-dom"
 import { MovieContext } from "../App"
 import React from "react"
 
-export const IdOne =() =>{
+export const IdOne = () =>{
 
    const IdContext = React.useContext(MovieContext)
    
     const params = useParams();
+    console.log(params)
 
     const findId = IdContext.find((item) => item.id === +params.id);
     return (

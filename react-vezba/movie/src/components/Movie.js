@@ -5,7 +5,7 @@ import {InfoMovie} from "./InfoMovie"
 
 export const Movie = ()=> {
     const contextObject = React.useContext(MovieContext)
-    //const infoAboutMovie = contextObject.movieObj
+    
 
     return (
         <div>
@@ -16,9 +16,6 @@ export const Movie = ()=> {
         <p>Genere: {contextObject.genere}</p>
         <p>relise Date: {contextObject.releaseDate}</p>
         <InfoMovie/>
-
-
-
         </div>
     )
 }
