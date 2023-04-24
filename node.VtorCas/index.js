@@ -20,8 +20,8 @@ console.log(typeof valuestr)
 //a + b // binare dva operanti
 //+c // unaren eden operant
 
-//console.log(+1)
-//console.log(+true)
+// console.log(+1)
+// console.log(+true)
 
 // ||, &&, !, ??
 

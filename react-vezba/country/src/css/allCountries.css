@@ -1,0 +1,42 @@
+/* .flex-container{
+    max-width: 100%;      
+    background-color: #ada397;
+    padding: 30px;
+   
+}
+span{
+    padding: 100px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.div-country, .div-continents, .div-capital, .div-population, .div-timezones {
+    display: block;
+    max-width: 100%;
+   
+}
+h3{
+    text-align: center;
+} */
+
+h1{
+    color: #fefbd8;
+    text-decoration: underline;
+}
+.country-name{
+    background-color: #618685;
+    padding:8px;
+    border: 2px solid #fefbd8;
+}
+p{
+    color: #618685;
+    font-size: bold;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-weight: 150;
+}

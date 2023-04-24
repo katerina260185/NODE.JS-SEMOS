@@ -1,0 +1,16 @@
+.search-btn{
+   background-color:#b1cbbb;
+   padding:9px 20px;
+   border:none;
+   color:black;
+}
+
+.findCountry{
+   background-color: #deeaee;
+   padding:10px;
+}
+
+.loader{
+   color:  #c94c4c;
+   font-size:x-large;
+}
