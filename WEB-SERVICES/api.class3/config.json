@@ -1,0 +1,14 @@
+{
+    "development": {
+        "port": 10000,
+        "MONGO_USERNAME" : "katerinaatanasovska85",
+        "MONGO_PASSWORD" : "katerina",
+        "jwt_key" : "mySecretKey",
+        "api_key" : "86d939d6c1a1bd5fcbe25c736ae015fd-6b161b0a-afcde362 ",
+        "domain" : "sandbox12950fbf248e4e2ba287aacbb4f657d0.mailgun.org",
+        "sender_email" : "test@test.com"
+        
+        
+    }
+    
+}

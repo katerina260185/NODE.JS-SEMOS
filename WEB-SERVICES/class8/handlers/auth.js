@@ -1,10 +1,11 @@
 const bcrypt = require("bcryptjs");
 
 const jwt = require("jsonwebtoken");
+
 const { validate, Account, AccountLogin } = require("../pkg/account/validate");
 const account = require("../pkg/account");
 const config = require("../pkg/config");
-const mailgun =  require ("mailgun-js")
+//const mailgun =  require ("mailgun-js")
 // ({
 //   apiKey: MAILGUN_API_KEY,
 //   domain: MAILGUN_DOMAIN,
@@ -49,7 +50,7 @@ const register = async (req, res) => {
     if (exists) {
       throw {
         code: 400,
-        error: "Account with this email already exists!", //OK
+        error: "Account with this email already exists!" //OK
       };
     }
     req.body.password = bcrypt.hashSync(req.body.password);

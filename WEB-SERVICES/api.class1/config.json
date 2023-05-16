@@ -1,0 +1,17 @@
+{
+    "development" : {
+        "port" : 10000,
+        "MONGO_USERNAME" : "katerinaatanasovska85",
+        "MONGO_PASSWORD" : "katerina",
+        "jwt_key" : "mySecretKey"
+      
+    }, 
+    "weather" : {
+        "port": 10000 ,
+        "api_key": "304f39c9739f3ac8c4c74c44ade17062",
+        "cache_expiery": 1800, 
+        "API_URL": "https://api.openweathermap.org/data/2.5"
+       
+    }
+}
+

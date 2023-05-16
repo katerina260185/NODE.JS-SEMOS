@@ -1,0 +1,15 @@
+{
+    "development" : {
+        "port" : 10000,
+        "MONGO_USERNAME" : "katerinaatanasovska85",
+        "MONGO_PASSWORD" : "katerina",
+        "jwt_key" : "mySecretKey",
+        "MAILGUN_API_KEY" : "123123", 
+        "MAILGUN_DOMAIN": "example.com"  
+    }, 
+    "live-app" : {
+        "port" : 8080,
+        "MONGO_USERNAME" : "admin",
+        "MONGO_PASSWORD" : "admin"
+    }
+}
