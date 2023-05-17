@@ -91,7 +91,7 @@ const forgotPassword = async (req, res) => {
 
   try {
     await sendMail(user.email, "PASSWORD_RESET", { user, link });
-    res.status(200).send("Password reset link has been sent to your email... ");
+    return res.status(200).send("Password reset link has been sent to your email... ");
   } catch (err) {
     return res.status(500).send("Message not sent!");
   }
@@ -119,10 +119,14 @@ const resetPassTemplate = async (req, res) => {
 const resetPassword = async (req, res) => {
   const { id, token } = req.params;
   const { password, confirmPass } = req.body;
+  // const email = req.body.email;
 
   if (password !== confirmPass) {
     return res.status(400).send("Passwords do not match!");
   }
+
+  const saltRounds = 10;
+    const newPasswordHashed = await bcrypt.hash(confirmPass, saltRounds);
 
   const user = await account.getById(id);
 
@@ -133,9 +137,10 @@ const resetPassword = async (req, res) => {
   const secret = config.get("development").jwt_key + user.password;
 
   try {
+    //koj token go verificira????
     const payload = jwt.verify(token, secret);
-    await account.setNewPassword(user.id, password);
-    user.password = password;
+    await account.setNewPassword(user.id, newPasswordHashed);
+    user.password = newPasswordHashed;
     res.send(user);
     res.render("reset-password", { email: user.email });
   } catch (err) {

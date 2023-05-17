@@ -45,10 +45,14 @@ api.use(
 api.post("/api/v1/auth/login", login); //ok
 api.post("/api/v1/auth/register", register); //ok
 api.get("/api/v1/auth/refresh-token", refreshToken); //ok
+//ovaa ruta ja stavame vo ejs forgot-password, na metod post
 api.post("/api/v1/auth/forgot-password", forgotPassword); // go generira linkot i treba da prati mail so linkot
 api.post("/reset-password/:id/:token", resetPassword); //go stavame linkot
 //api.post("api/reset-password", resetPassword);
 api.get("/reset-password/:id/:token", resetPassTemplate);
+// na forgot-password.ejs vo action mu stavame method-post
+// i patekata "/api/v1/auth/forgot-password" vo koja e naveden handler
+//funkcijata i taka ke znae koja funkcija da ja izvrsi
 api.get("/forgot-password", (req, res) => {
  res.render("forgot-password"); // go renderira template-ot forgot-password //frontend
 });
